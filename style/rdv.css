@@ -1,0 +1,147 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* En-tête principale */
+header.doctor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #e9e9e9;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Informations du docteur */
+.doctor-info {
+    background-color: #dcdcdc;
+    padding: 20px;
+    border-radius: 10px;
+    width: 15%;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-info p {
+    margin: 5px 0;
+}
+
+/* Titre principal */
+.title-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.main-title {
+    font-size: 60Px;
+    font-weight: bold;
+    color: #333;
+    background-color: #dcdcdc;
+    padding: 15px 30px;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+/* Logo et bouton Log Out */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.doctor-logo {
+    width: 70px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button {
+    text-decoration: none;
+    background-color: #dcdcdc;
+    color: black;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.logout-button:hover {
+    background-color: #ccc;
+}
+
+/* Section des rendez-vous */
+.appointments {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.appointment-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.appointment-card p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.cancel-button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.cancel-button:hover {
+    background-color: #ff3c3c;
+}
+
+/* Conteneur des actions (RDV Passés et Nouveau RDV) */
+.actions-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 40px;
+    gap: 15px;
+}
+
+.action-button {
+    text-decoration: none;
+    background-color: #dcdcdc;
+    color: black;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.action-button:hover {
+    background-color: #ccc;
+}
