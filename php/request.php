@@ -2,9 +2,9 @@
 
 // Database connection parameters
 $host = 'localhost';
-$dbname = 'your_database_name';
-$user = 'your_username';
-$password = 'your_password';
+$dbname = 'doctordv';
+$user = 'postgres';
+$password = 'postgres';
 
 
 function executeRequest($request) {
