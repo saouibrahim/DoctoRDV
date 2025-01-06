@@ -12,11 +12,9 @@
         <img src="media/logo.png" alt="Logo DoctoRDV" class="auth-logo">
         <h1>Page d'Authentification</h1>
         <button class="role-indicator">Patient</button>
-        <form action="rdv_passes_patient.html" method="post">
-            <input type="email" name="email" placeholder="Email" class="auth-input" required>
-            <input type="password" name="password" placeholder="Mode de Passe" class="auth-input" required>
-            <button type="submit" class="auth-button">Login</button>
-        </form>
+        <input type="email" name="email" placeholder="Email" class="auth-input" required>
+        <input type="password" name="password" placeholder="Mode de Passe" class="auth-input" required>
+        <a href="rdv_patient.html" type="submit" class="auth-button">Login</a>
         <a href="enregistrement_patient.html" class="auth-link">Sign Up</a>
     </div>
 </body>

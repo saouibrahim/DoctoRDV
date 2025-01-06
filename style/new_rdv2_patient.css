@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.header-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.logo {
+    width: 75px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.appointment-container {
+    background-color: #dcdcdc;
+    padding: 18.75px 37.5px;
+    border-radius: 12.5px;
+    width: 62.5%;
+    box-shadow: 0px 3.75px 6.25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.doctor-info p {
+    margin: 12.5px 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.slots-container {
+    margin: 18.75px 0;
+    max-height: 187.5px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 6.25px;
+    background-color: #fff;
+    padding: 12.5px;
+}
+
+.slots-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.slots-list li {
+    margin: 12.5px 0;
+    display: flex;
+    align-items: center;
+    gap: 12.5px;
+}
+
+.slots-list label {
+    font-size: 15px;
+    color: #333;
+}
+
+.action-buttons {
+    margin-top: 18.75px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.confirm-button,
+.cancel-button {
+    background-color: #dcdcdc;
+    border: none;
+    padding: 12.5px 18.75px;
+    font-size: 17.5px;
+    font-weight: bold;
+    border-radius: 6.25px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    color: #333;
+}
+
+.confirm-button:hover {
+    background-color: #4caf50;
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: #ff5c5c;
+    color: white;
+}
