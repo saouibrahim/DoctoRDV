@@ -19,7 +19,14 @@
                 <input type="tel" name="telephone" placeholder="N°Telephone" class="register-input" required>
                 <input type="email" name="email" placeholder="Email" class="register-input" required>
                 <input type="email" name="email_confirmation" placeholder="Email Confirmation" class="register-input" required>
-                <input type="text" name="specialite" placeholder="Spécialité" class="register-input" required>
+                <li class="register-input deroulant" name="specialite" placeholder="Spécialité" href="#"><a>Spécialité &ensp;</a>
+                    <ul class="register-input sous ">
+                      <li><a href="#">Cardiology</a></li>
+                      <li><a href="#">Dermatology</a></li>
+                      <li><a href="#">Neurology</a></li>
+                      <li><a href="#">Pediatrics</a></li>
+                    </ul>
+                </li>
                 <input type="password" name="password" placeholder="Mot de Passe" class="register-input" required>
             </div>
             <button type="submit" class="register-button">Sign Up</button>
