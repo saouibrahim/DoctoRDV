@@ -24,13 +24,13 @@
         <!-- Logo et bouton Log Out -->
         <div class="header-actions">
             <img src="media/logo.png" alt="Logo DoctoRDV" class="doctor-logo">
-            <a href="main.html" class="logout-button">Log Out</a>
+            <a href="main.php" class="logout-button">Log Out</a>
         </div>
     </header>
 
     <!-- Bouton Revenir -->
     <div class="actions-container">
-        <a href="rdv_patient.html" class="action-button">Revenir</a>
+        <a href="rdv_patient.php" class="action-button">Revenir</a>
     </div>
 
     <!-- Section des rendez-vous passés -->
@@ -41,7 +41,7 @@
                 <p><strong>Heure :</strong> 09:00 - 10:00</p>
                 <p><strong>Médecin :</strong> Dr. Alice Smith</p>
                 <p><strong>Spécialité :</strong> Cardiologie</p>
-                <a href="new_rdv2_patient.html" class="cancel-button">Reprendre RDV</a>
+                <a href="new_rdv2_patient.php" class="cancel-button">Reprendre RDV</a>
             </div>
 
             <div class="appointment-card">
@@ -49,7 +49,7 @@
                 <p><strong>Heure :</strong> 10:00 - 11:00</p>
                 <p><strong>Médecin :</strong> Dr. Robert Brown</p>
                 <p><strong>Spécialité :</strong> Neurologie</p>
-                <a href="new_rdv2_patient.html" class="cancel-button">Reprendre RDV</a>
+                <a href="new_rdv2_patient.php" class="cancel-button">Reprendre RDV</a>
             </div>
 
             <div class="appointment-card">
@@ -57,7 +57,7 @@
                 <p><strong>Heure :</strong> 11:00 - 12:00</p>
                 <p><strong>Médecin :</strong> Dr. Emily Davis</p>
                 <p><strong>Spécialité :</strong> Dermatologie</p>
-                <a href="new_rdv2_patient.html" class="cancel-button">Reprendre RDV</a>
+                <a href="new_rdv2_patient.php" class="cancel-button">Reprendre RDV</a>
             </div>
         </div>
     </main>

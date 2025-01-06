@@ -25,13 +25,13 @@
         <!-- Logo et bouton Log Out -->
         <div class="header-actions">
             <img src="media/logo.png" alt="Logo DoctoRDV" class="doctor-logo">
-            <a href="main.html" class="logout-button">Log Out</a>
+            <a href="main.php" class="logout-button">Log Out</a>
         </div>
     </header>
 
     <!-- Bouton Revenir -->
     <div class="actions-container">
-        <a href="rdv_doc.html" class="action-button">Revenir</a>
+        <a href="rdv_doc.php" class="action-button">Revenir</a>
     </div>
 
     <!-- Section des rendez-vous passés -->

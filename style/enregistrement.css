@@ -77,15 +77,6 @@
     z-index: 1000;
 }
 
-.sous a{
-    padding: 10px;
-    border-bottom: none;
-}
-
-.sous a:hover{
-    border-bottom: none;
-}
-
 .deroulant > a::after{
     content:"▽";
     font-size: 30px;

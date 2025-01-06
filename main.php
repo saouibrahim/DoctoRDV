@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,8 +11,8 @@
     <div class="container">
         <img src="media/logo.png" alt="Logo DoctoRDV">
         <h1>DoctoRDV</h1>
-        <a href="authentification_patient.html" class="button">Patient</a>
-        <a href="authentification_doc.html" class="button">Docteur</a>
+        <a <?php header('authentification_patient.php');?> class="button">Patient</a>
+        <a href="authentification_doc.php" class="button">Docteur</a>
     </div>
 </body>
 </html>

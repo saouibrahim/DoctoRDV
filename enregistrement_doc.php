@@ -11,7 +11,7 @@
         <img src="media/logo.png" alt="Logo DoctoRDV" class="register-logo">
         <h1>Page d'Enregistrement</h1>
         <button class="role-indicator">Docteur</button>
-        <form action="rdv_passes_doc.html" method="post">
+        <form action="rdv_passes_doc.php" method="post">
             <div class="register-grid">
                 <input type="text" name="nom" placeholder="Nom" class="register-input" required>
                 <input type="text" name="prenom" placeholder="Prénom" class="register-input" required>
@@ -31,7 +31,7 @@
             </div>
             <button type="submit" class="register-button">Sign Up</button>
         </form>
-        <a href="authentification_doc.html" class="register-link">Already Signed Up</a>
+        <a href="authentification_doc.php" class="register-link">Already Signed Up</a>
     </div>
 </body>
 </html>

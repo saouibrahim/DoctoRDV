@@ -40,8 +40,8 @@
             </ul>
         </div>
         <div class="action-buttons">
-            <a href="rdv_patient.html" class="confirm-button">Confirmer</a>
-            <a href="new_rdv_patient.html" class="cancel-button">Annuler</a>
+            <a href="rdv_patient.php" class="confirm-button">Confirmer</a>
+            <a href="new_rdv_patient.php" class="cancel-button">Annuler</a>
         </div>
     </div>
 </body>
