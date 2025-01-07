@@ -1,34 +1,35 @@
 <?php
 
 // Database connection parameters
-$host = 'localhost';
-$dbname = 'doctordv';
-$user = 'postgres';
-$password = 'postgres';
+
+const DB_USER = 'postgres';
+define('DB_PASSWORD', 'postgres');
+const DB_NAME = 'doctordv';
+const DB_SERVER = '127.0.0.1';
+const DB_PORT = '5432';
 
 
 function executeRequest($request) {
     global $host, $dbname, $user, $password;
 
     try {
-        $dsn = "pgsql:host=$host;dbname=$dbname";
-        $options = [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-        ];
+        $dsn = 'pgsql:dbname='.DB_NAME.';host='.DB_SERVER.';port='.DB_PORT;
+        
 
-        $pdo = new PDO($dsn, $user, $password, $options);
+        $pdo = new PDO($dsn,$user,$password);
 
         $stmt = $pdo->prepare($request);
         $stmt->execute();
 
-        return $stmt->fetchAll();
+        return $stmt;
     } catch (PDOException $e) {
         return ["error" => $e->getMessage()];
     }
 }
 
 
+$result = executeRequest('SELECT * FROM patient');
 
-executeRequest("SELECT * FROM patient");
+echo '<br>'.$result;
+
 ?>
