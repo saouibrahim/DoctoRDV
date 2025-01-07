@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style/enregistrement.css">
 </head>
 <body>
-    <?php include 'php/enr_pat.php' ?>
+    <?php include 'php/en_pat.php' ?>
     <div class="register-container">
         <img src="media/logo.png" alt="Logo" class="register-logo">
         <h1>Page d'Enregistrement</h1>

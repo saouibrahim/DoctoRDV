@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 require_once 'php/utils/db.php';
@@ -7,43 +6,31 @@ $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
-    $email_confirmation = $_POST['email_confirmation'] ?? '';
-    $specialization_id = $_POST['specialite'] ?? '';
+    $password = $_POST['password'] ?? '';
 
-    // Vérifications de base
-    if ($email !== $email_confirmation) {
-        $error = "Les emails ne correspondent pas.";
-    } else {
-        // Vérification si l'email existe déjà dans la base de données
-        $stmt = $pdo->prepare("SELECT COUNT(*) FROM PATIENTS WHERE email = :email");
+    if (!empty($email) && !empty($password)) {
+        $query = "SELECT * FROM PATIENTS WHERE email = :email";
+        $stmt = $pdo->prepare($query);
         $stmt->bindParam(':email', $email);
         $stmt->execute();
-        $emailExists = $stmt->fetchColumn();
 
-        if ($emailExists) {
-            $error = "Cet email est déjà utilisé.";
-        } else {
-            // Enregistrement dans la base de données
-            try {
-                $stmt = $pdo->prepare("
-                    INSERT INTO PATIENTS (firstname, lastname, email, phone, password)
-                    VALUES (:firstname, :lastname, :email, :phone, :password)
-                ");
-                $stmt->bindParam(':firstname', $_POST['prenom']);
-                $stmt->bindParam(':lastname', $_POST['nom']);
-                $stmt->bindParam(':email', $email);
-                $stmt->bindParam(':phone', $_POST['telephone']);
-                $stmt->bindParam(':password', $_POST['password']);
-                if ($stmt->execute()) {
-                    header("Location: rdv_patient.php");
-                    exit;
-                } else {
-                    $error = "Une erreur s'est produite lors de l'insertion des données.";
-                }
-            } catch (PDOException $e) {
-                $error = "Erreur lors de l'insertion : " . $e->getMessage();
+        if ($stmt->rowCount() > 0) {
+            $patient = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            // Comparaison directe des mots de passe (non cryptés)
+            if ($password === $patient['password']) {
+                $_SESSION['patient_id'] = $patient['id'];
+                $_SESSION['patient_name'] = $patient['firstname'] . ' ' . $patient['lastname'];
+                header('Location: rdv_patient.php');
+                exit;
+            } else {
+                $error = 'Mot de passe incorrect.';
             }
+        } else {
+            $error = 'Email introuvable.';
         }
+    } else {
+        $error = 'Veuillez remplir tous les champs.';
     }
 }
 ?>

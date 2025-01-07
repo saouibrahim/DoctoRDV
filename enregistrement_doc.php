@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php include 'php/enr_doc.php' ?>
-
+    <?php include 'php/en_doc.php' ?>
     <div class="register-container">
         <img src="media/logo.png" alt="Logo DoctoRDV" class="register-logo">
         <h1>Page d'Enregistrement</h1>
