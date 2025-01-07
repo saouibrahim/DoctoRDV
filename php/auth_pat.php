@@ -5,7 +5,7 @@ include 'request.php';
 
 function authenticatePatient($email, $password) {
     //this is the request that is used to check if the patient exists in the database
-    $request = "SELECT * FROM patient WHERE email = '$email' AND password = '$password'";
+    $request = "SELECT * FROM patients WHERE email = '$email' AND password = '$password' ";
     //this is the result of the request
     $result = executeRequest($request);
     //if the result is empty then the patient does not exist

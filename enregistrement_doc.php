@@ -1,4 +1,4 @@
-<?php
+<!-- 
 session_start();
 require_once 'php/utils/db.php';
 
@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
-?>
+ -->
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -73,6 +73,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="style/enregistrement.css">
 </head>
 <body>
+    <?php include 'php/auth_doc.php' ?>
+
     <div class="register-container">
         <img src="media/logo.png" alt="Logo DoctoRDV" class="register-logo">
         <h1>Page d'Enregistrement</h1>
