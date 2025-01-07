@@ -20,7 +20,7 @@
             <input type="password" class="register-input" placeholder="Mode de Passe">
         </div>
         <a href="rdv_passes_patient.php" class="register-button">Sign Up</a>
-        <a href="authentification_patient.php" class="register-link">Already Signed Up</a>
+        <a href="authentification_Patient.php" class="register-link">Already Signed Up</a>
     </div>
 </body>
 </html>
