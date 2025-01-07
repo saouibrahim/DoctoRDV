@@ -36,7 +36,7 @@ try {
         <img src="media/logo.png" alt="Logo DoctoRDV" class="register-logo">
         <h1>Page d'Enregistrement</h1>
         <button class="role-indicator">Docteur</button>
-        <form action="rdv_passes_doc.php" method="post">
+        <form action="rdv_doc.php" method="post">
             <div class="register-grid">
                 <input type="text" name="nom" placeholder="Nom" class="register-input" required>
                 <input type="text" name="prenom" placeholder="Prénom" class="register-input" required>

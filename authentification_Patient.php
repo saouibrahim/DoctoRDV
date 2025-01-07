@@ -18,7 +18,6 @@
                     <input type="email" name="email" placeholder="Email" class="auth-input" required>
                     <input type="password" name="password" placeholder="Mot de Passe" class="auth-input" required>
                     <?php
-                    // Show the error message if it exists
                     if (!empty($error_message)) {
                         echo "<div class='text-danger'>$error_message</div>";
                     }
