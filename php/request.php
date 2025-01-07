@@ -3,7 +3,7 @@
 // Database connection parameters
 
 const DB_USER = 'postgres';
-define('DB_PASSWORD', 'postgres');
+const DB_PASSWORD = 'postgres';
 const DB_NAME = 'doctordv';
 const DB_SERVER = '127.0.0.1';
 const DB_PORT = '5432';
@@ -11,6 +11,8 @@ const DB_PORT = '5432';
 
 function executeRequest($request) {
     global $host, $dbname, $user, $password;
+    $user = DB_USER;
+    $password = DB_PASSWORD;
 
     try {
         $dsn = 'pgsql:dbname='.DB_NAME.';host='.DB_SERVER.';port='.DB_PORT;
@@ -28,8 +30,10 @@ function executeRequest($request) {
 }
 
 
-$result = executeRequest('SELECT * FROM patient');
+$result = executeRequest('SELECT * FROM patients');
 
-echo '<br>'.$result;
+foreach ($result as $row) {
+    echo $row['firstname'].'<br>';
+}
 
 ?>
