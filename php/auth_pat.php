@@ -18,18 +18,16 @@ function authenticatePatient($email, $password) {
 
 //when the button log in is clicked
 //the function is used to authenticate the patient
-if (isset($_POST['login'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+//and then redirect to the page rdv_patient.php
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST["email"];
+    $password = $_POST["password"];
     $patient = authenticatePatient($email, $password);
-
-    if (isset($patient['error'])) {
-        echo $patient['error'];
+    if (isset($patient["error"])) {
+        echo "<script>alert('Email ou Mot de Passe invalide.')</script>";
     } else {
-        session_start();
-        $_SESSION['patient'] = $patient;
-        header('Location: patient.php');
+        header("Location: rdv_patient.php");
     }
 }
 

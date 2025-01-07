@@ -27,4 +27,8 @@ function executeRequest($request) {
         return ["error" => $e->getMessage()];
     }
 }
+
+
+
+executeRequest("SELECT * FROM patient");
 ?>

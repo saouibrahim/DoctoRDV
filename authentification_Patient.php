@@ -14,14 +14,23 @@
             <div class="auth-container">
                 <img src="media/logo.png" alt="Logo DoctoRDV" class="auth-logo">
                 <h1>Page d'Authentification</h1>
-                <button class="role-indicator">Patient</button>
-                <input type="email" name="email" placeholder="Email" class="auth-input" required>
-                <input type="password" name="password" placeholder="Mode de Passe" class="auth-input" required>
-                <a href="rdv_patient.php" type="submit" class="auth-button">Login</a>
+                <form method="POST" action="authentification_Patient.php" class="auth-form">
+                    <input type="email" name="email" placeholder="Email" class="auth-input" required>
+                    <input type="password" name="password" placeholder="Mot de Passe" class="auth-input" required>
+                    <?php
+                    // Show the error message if it exists
+                    if (!empty($error_message)) {
+                        echo "<div class='text-danger'>$error_message</div>";
+                    }
+                    ?>
+                    <button type="submit" class="auth-button">Login</button>
+                </form>
                 <a href="enregistrement_patient.php" class="auth-link">Sign Up</a>
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <?php include 'php/auth_pat.php'; ?>
+
 </body>
 </html>
