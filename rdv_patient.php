@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="style/rdv.css">
 </head>
 <body>
+
     <!-- En-tête principale avec informations du patient et actions -->
     <header class="doctor-header">
         <!-- Informations du patient -->
         <div class="doctor-info">
-            <p><strong>Nom du Patient :</strong> John Doe</p>
-            <p><strong>N° Téléphone :</strong> 123-456-7890</p>
-            <p><strong>Email :</strong> johndoe@gmail.com</p>
-            <p><strong>N° Patient :</strong> P123456</p>
+            <p><strong>Nom du Patient :</strong> Ibrahim SAOU</p>
+            <p><strong>N° Téléphone :</strong> 07729893921</p>
+            <p><strong>Email :</strong> test@gmail.com </p>
         </div>
 
         <!-- Titre principal -->

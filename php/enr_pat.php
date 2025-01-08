@@ -3,6 +3,7 @@ session_start();
 require_once 'php/utils/db.php';
 
 $error = '';
+$_SESSION['patient_id'] = 'null';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
@@ -29,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $error = 'Email introuvable.';
         }
+
     } else {
         $error = 'Veuillez remplir tous les champs.';
     }
